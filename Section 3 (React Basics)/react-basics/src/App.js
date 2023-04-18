@@ -1,5 +1,6 @@
+import React  from "react";
 import ExpenseItem from "./components/ExpenseItem";
-
+import Expenses from "./components/Expenses";
 function App() {
     const expenses = [
         {
@@ -22,24 +23,10 @@ function App() {
             date: new Date(2021, 5, 12),
         },
     ];
-    return (
-        <div>
-            <h2>Let's get started!</h2>
-            < ExpenseItem
-                title={expenses[0].title}
-                date={expenses[0].date}
-                amount={expenses[0].amount}
-
-            ></ExpenseItem>
-            < ExpenseItem
-                title={expenses[1].title}
-                date={expenses[1].date}
-                amount={expenses[1].amount}
-
-            ></ExpenseItem>
-
-        </div>
-    );
+    return (React.createElement("div",
+        React.createElement("h2",{},"Lets get started"),
+        React.createElement(Expenses,{items:expenses})
+        ));
 }
 
 export default App;
