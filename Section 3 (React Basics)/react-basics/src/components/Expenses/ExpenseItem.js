@@ -6,17 +6,14 @@ function ExpenseItem(props) {
 
 
     const [title,setTitle] = useState(props.title)
-    const clickHanlder = ()=>{
-        setTitle("Updated")
-    }
+
     return (<Card className="expense-item">
          <div className="expense-item__description">
             <ExpenseDate date={props.date}></ExpenseDate>
             <h2>{title}</h2>
             <div className="expense-item__price">${props.amount}</div>
         </div>
-        <button onClick={clickHanlder}> Click Me</button>
-    </Card>)
+     </Card>)
 }
 
 export default ExpenseItem;
