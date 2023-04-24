@@ -1,7 +1,7 @@
 import "../NewExpense/ExpenseForm.css";
 import React, {useState} from "react";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const emptyValue = "";
 
@@ -21,6 +21,7 @@ const ExpenseForm = () => {
         setAmount(emptyValue)
         setTitle(emptyValue)
         setDate(emptyValue)
+        props.OnSaveExpense(expenseData);
 
     }
 
