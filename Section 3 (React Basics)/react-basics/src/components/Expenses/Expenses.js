@@ -4,6 +4,7 @@ import Card from "../UI/Card";
 import React, {useState} from "react";
 import ExpenseFilter from "./ExpenseFilter";
 
+
 function Expenses(props) {
 
     const [selectedYear, setSelectedYear] = useState("2020")
@@ -19,6 +20,7 @@ function Expenses(props) {
             {props.items.map((expenseData) =>(
 
                 <ExpenseItem
+                    key = {expenseData.id}
                     title={expenseData.title}
                     date={expenseData.date}
                     amount={expenseData.amount}/>))
