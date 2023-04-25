@@ -25,6 +25,9 @@ const ExpenseForm = (props) => {
 
     }
 
+    const cancelButtonEventHandler =() =>{
+        props.OnCancel();
+    }
     const changeTitleHandler = (event) => {
         setTitle(event.target.value)
         console.log(enteredTitle)
@@ -57,6 +60,8 @@ const ExpenseForm = (props) => {
             </div>
             <div className="new-expense__actions">
                 <button type="submit">Add Expense</button>
+                <button onClick={cancelButtonEventHandler} >Cancel</button>
+
             </div>
         </form>
     )
